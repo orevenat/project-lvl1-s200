@@ -12,17 +12,18 @@ export const evenGame = (name) => {
       const correct = isEven(number) ? 'yes' : 'no';
       if (answer === correct) {
         console.log('Correct!');
-        return(iter(count - 1));
       } else {
         const incorrect = isEven(number) ? 'no' : 'yes';
         console.log(`'${incorrect}' is wrong answer ;(. correct answer was '${correct}'.`);
         console.log('Let\'s try again, Bill!');
-        return;
+        return null;
       }
+
+      return iter(count - 1);
     }
 
     console.log(`Congratulations, ${name}!`);
-    return;
+    return null;
   };
 
   return iter(3);
