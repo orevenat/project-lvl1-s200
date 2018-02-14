@@ -9,7 +9,10 @@ const getName = () => {
 
 export default (type, count) => {
   console.log('\nWelcome to the Brain Games!');
-  console.log(messageByType(type));
+  const message = messageByType(type);
+  if (message != null) {
+    console.log(message);
+  }
   const name = getName();
 
   if (count > 0) {
