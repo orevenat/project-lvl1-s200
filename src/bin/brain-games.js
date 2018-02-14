@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { getName } from '..';
+import start from '..';
 
-console.log('Welcome to the Brain Games!');
-getName();
+start('default');
