@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 import even from './even';
 import calc from './calc';
+import gcd from './gcd';
 
 export const getByType = (type) => {
   switch (type) {
@@ -9,6 +10,8 @@ export const getByType = (type) => {
       return even();
     case 'calc':
       return calc();
+    case 'gcd':
+      return gcd();
     default:
       return null;
   }
@@ -20,6 +23,8 @@ export const messageByType = (type) => {
       return 'Answer "yes" if number even otherwise answer "no".\n';
     case 'calc':
       return 'What is the result of the expression?\n';
+    case 'gcd':
+      return 'Find the greatest common divisor of given numbers.\n';
     default:
       return null;
   }
