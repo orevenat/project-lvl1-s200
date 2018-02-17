@@ -2,6 +2,8 @@ import { cons } from 'hexlet-pairs';
 import randomInt from '../randomInt';
 import gcd from '../gcd';
 
+const message = 'Find the greatest common divisor of given numbers.\n';
+
 const question = (num1, num2) => `${num1} ${num2}`;
 
 const answer = (num1, num2) => gcd(num1, num2);

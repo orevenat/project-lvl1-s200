@@ -2,6 +2,8 @@ import { cons } from 'hexlet-pairs';
 import randomInt from '../randomInt';
 import randomOperation from '../randomOperation';
 
+const message = 'What is the result of the expression?\n';
+
 const question = (num1, num2, operation) => `${num1} ${operation} ${num2}`;
 
 const answer = (num1, num2, operation) => {

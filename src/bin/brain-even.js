@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 import start from '..';
 
-start('even', 3);
+start(even(), 3);

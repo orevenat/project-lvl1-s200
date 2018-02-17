@@ -1,4 +1,3 @@
 #!/usr/bin/env node
 import start from '..';
-
-start('gcd', 3);
+start(gcd, 3);

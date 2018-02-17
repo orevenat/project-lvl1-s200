@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 import start from '..';
 
-start('calc', 3);
+start(calc());
