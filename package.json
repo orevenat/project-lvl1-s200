@@ -1,9 +1,10 @@
 {
   "name": "orevenat-brain-games",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Hexlet Brain Games",
   "main": "index.js",
   "bin": {
+    "brain-balance": "dist/bin/brain-balance.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-games": "dist/bin/brain-games.js",

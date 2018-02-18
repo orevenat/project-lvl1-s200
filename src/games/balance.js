@@ -1,11 +1,11 @@
 import { cons } from 'hexlet-pairs';
 import game from '..';
-import isEven from '../isEven';
 import randomInt from '../randomInt';
+import balance from '../balance';
 
-const message = 'Answer "yes" if number even otherwise answer "no".';
-const question = () => randomInt(1, 100);
-const answer = number => (isEven(number) ? 'yes' : 'no');
+const message = 'Balance the given number.';
+const question = () => randomInt(10, 99);
+const answer = number => balance(number.toString());
 
 const gamePass = () => {
   const quest = question();

@@ -1,22 +1,24 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
+const lineEnding = '\n';
+
 const getName = () => {
   const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
+  console.log(`Hello, ${name}!${lineEnding}`);
   return name;
 };
 
-const showRules = message => (message ? console.log(message) : null);
+const showRules = message => (message ? console.log(message, lineEnding) : null);
 
 const endMessage = name => console.log(`Congratulations, ${name}!`);
 
-export default (gamePass, message, quantity) => {
-  console.log('\nWelcome to the Brain Games!');
+export default (gamePass, message, quantity = 3) => {
+  console.log(`${lineEnding}Welcome to the Brain Games!`);
   showRules(message);
   const name = getName();
 
-  const iter = (count = 0) => {
+  const iter = (count) => {
     if (count === 0) {
       return endMessage(name);
     }
