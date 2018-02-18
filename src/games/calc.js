@@ -1,4 +1,5 @@
 import { cons } from 'hexlet-pairs';
+import game from '..';
 import randomInt from '../randomInt';
 import randomOperation from '../randomOperation';
 
@@ -18,11 +19,13 @@ const answer = (num1, num2, operation) => {
   return result;
 };
 
-export default () => {
-  const num1 = randomInt(1, 70);
-  const num2 = randomInt(1, 30);
+const gamePass = () => {
+  const num1 = randomInt(1, 10);
+  const num2 = randomInt(1, 5);
   const operation = randomOperation();
   const quest = question(num1, num2, operation);
   const answ = answer(num1, num2, operation);
   return cons(quest, answ);
 };
+
+export default count => game(gamePass, message, count);

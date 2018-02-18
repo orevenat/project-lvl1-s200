@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import start from '..';
-start(gcd, 3);
+import start from '../games/gcd';
+
+start(3);
