@@ -4,6 +4,7 @@ import randomInt from '../randomInt';
 import randomOperation from '../randomOperation';
 
 const message = 'What is the result of the expression?';
+const questMessage = 'Question:';
 
 const question = (num1, num2, operation) => `${num1} ${operation} ${num2}`;
 
@@ -25,8 +26,8 @@ const gamePass = () => {
   const operation = randomOperation();
   const quest = question(num1, num2, operation);
   const answ = answer(num1, num2, operation);
-  return cons(quest, answ);
+  return cons(cons(quest, questMessage), answ);
 };
 
-const gameStart = (count = 3) => game(gamePass, message, count);
+const gameStart = (count = 3) => game(gamePass, count, message);
 export default gameStart;

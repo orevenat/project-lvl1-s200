@@ -13,9 +13,13 @@ const showRules = message => (message ? console.log(message, lineEnding) : null)
 
 const endMessage = name => console.log(`Congratulations, ${name}!`);
 
-export default (gamePass, message, quantity = 3) => {
+const showQuestion = (question, message = 'Question:') => console.log(`${message} ${question}`);
+
+export default (gamePass, quantity = 3, message = null) => {
   console.log(`${lineEnding}Welcome to the Brain Games!`);
-  showRules(message);
+  if (message) {
+    showRules(message);
+  }
   const name = getName();
 
   const iter = (count) => {
@@ -25,7 +29,7 @@ export default (gamePass, message, quantity = 3) => {
     const gameIter = gamePass();
     const question = car(gameIter);
     const correct = cdr(gameIter).toString();
-    console.log(`Question: ${question}`);
+    showQuestion(car(question), cdr(question));
     const answer = readlineSync.question('Your answer: ');
     if (answer === correct) {
       console.log('Correct!');
