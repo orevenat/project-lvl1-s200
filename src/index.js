@@ -15,7 +15,7 @@ const endMessage = name => console.log(`Congratulations, ${name}!`);
 
 const showQuestion = question => console.log(`Question: ${question}`);
 
-export default (gamePass, quantity = 3, message = null) => {
+export default (gamePass, message = null, quantity = 3) => {
   console.log(`${lineEnding}Welcome to the Brain Games!`);
   if (message) {
     showRules(message);

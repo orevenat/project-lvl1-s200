@@ -28,5 +28,5 @@ const gamePass = () => {
   return cons(quest, answ);
 };
 
-const gameStart = (count = 3) => game(gamePass, count, message);
+const gameStart = (count = 3) => game(gamePass, message, count);
 export default gameStart;
