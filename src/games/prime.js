@@ -11,7 +11,7 @@ const gamePass = () => {
   const number = randomInt(1, 100);
   const quest = question(number);
   const answ = answer(number);
-  return cons(cons(quest, questMessage), answ);
+  return cons(`${questMessage} ${quest}`, answ);
 };
 
 const gameStart = (count = 3) => game(gamePass, count);
